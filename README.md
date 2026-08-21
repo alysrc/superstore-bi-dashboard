@@ -57,7 +57,7 @@ Raw data is never analysis-ready, and this project treats that step as part of t
 - Rescaled `order_date` and `ship_date` from the dataset's original range to 2023–2026, proportionally preserving the relative spacing and order between dates, so the analysis reflects a current, recognizable timeframe 
 
 Query: [`sql/01_data_quality_check.sql`](http://sql/01_data_quality_checks.sql).  
-Cleaned data: superstore\_sales\_clean.csv
+Cleaned data: data/superstore\_sales\_clean.csv
 
 ---
 
@@ -76,6 +76,8 @@ The insights and answers to the business questions above are presented in an int
 * Monthly and yearly sales/profit trends with YoY comparison  
 * Region → State → City drill-down for geographic performance  
 * Discount vs. profit margin analysis, split by category, showing exactly where discounting turns unprofitable ![Discount vs Profit Margin Analysis]()
+
+Check out: dashboard/dashboard\_superstore\_sales.pbix
 
 ---
 
