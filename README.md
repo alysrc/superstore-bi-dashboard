@@ -4,6 +4,7 @@ A SQL and Power BI project built to answer a simple but expensive question: *whe
 
 Using the [Kaggle Superstore dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final), this project traces sales performance from raw transaction data through to an interactive dashboard — with a specific focus on regional profitability, customer value concentration, and the point at which discounting stops paying off.
 
+📌 See Live Dashboard [here](http://app.powerbi.com/reportEmbed?reportId=ff309ae2-11f0-4998-8877-41e1986b54a9&autoAuth=true&ctid=e8e1fa0b-7d9d-4187-83a2-8a8010ef06b4)  
 ---
 
 ## What's Inside
