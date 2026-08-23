@@ -4,7 +4,6 @@ A SQL and Power BI project built to answer a simple but expensive question: *whe
 
 Using the [Kaggle Superstore dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final), this project traces sales performance from raw transaction data through to an interactive dashboard — with a specific focus on regional profitability, customer value concentration, and the point at which discounting stops paying off.
 
-📌 See Live Dashboard [here](http://app.powerbi.com/reportEmbed?reportId=ff309ae2-11f0-4998-8877-41e1986b54a9&autoAuth=true&ctid=e8e1fa0b-7d9d-4187-83a2-8a8010ef06b4)  
 ---
 
 ## What's Inside
@@ -14,6 +13,9 @@ Using the [Kaggle Superstore dataset](https://www.kaggle.com/datasets/vivek468/s
 **Discount impact analysis** —  analysis of profit margin against discount rate shows a clear downward relationship across the dataset, with Furniture and Office Supplies absorbing the steepest losses at high discount levels, while Technology holds up comparatively well. 
 
 **Data quality & governance** — before any of the above was trusted, the dataset went through a validation pass, and customer identifiers were pseudonymized to reflect how this kind of data would need to be handled in a real production environment.
+
+<img width="1757" height="995" alt="dashboard_img" src="https://github.com/user-attachments/assets/03a0a526-3ded-4709-bdbc-1c6accb01343" />
+
 
 ## Key Business Questions Answered
 
@@ -30,7 +32,7 @@ Using the [Kaggle Superstore dataset](https://www.kaggle.com/datasets/vivek468/s
 11. Are there data quality issues (duplicates, invalid values, missing fields) that could distort analysis?  
 12. How were customer identifiers handled to align with data privacy practices?
 
-Query: [`sql/02_business_queries.sql`](http://sql/01_data_quality_checks.sql).
+Query: [`sql/02_business_queries.sql`].
 
 📁 All SQL queries are saved in `/sql`
 
@@ -57,7 +59,7 @@ Raw data is never analysis-ready, and this project treats that step as part of t
 - Renamed all columns to `snake_case` for query readability and consistency  
 - Rescaled `order_date` and `ship_date` from the dataset's original range to 2023–2026, proportionally preserving the relative spacing and order between dates, so the analysis reflects a current, recognizable timeframe 
 
-Query: [`sql/01_data_quality_check.sql`](http://sql/01_data_quality_checks.sql).  
+Query: [`sql/01_data_quality_check.sql`] 
 Cleaned data: data/superstore\_sales\_clean.csv
 
 ---
@@ -66,7 +68,7 @@ Cleaned data: data/superstore\_sales\_clean.csv
 
 Customer names in this dataset were replaced with sequential identifiers (`Customer_0001`, `Customer_0002`, etc.) via a mapping table kept separate from the published data — a pseudonymization pattern consistent with GDPR's definition of the term. The mapping itself is never published; only the anonymized dataset and dashboard are.
 
-Query: [`sql/03_pseudonymize_customers.sql`](http://sql/99_pseudonymize_customers.sql)
+Query: [`sql/03_pseudonymize_customers.sql`]
 
 ---
 
@@ -76,9 +78,9 @@ The insights and answers to the business questions above are presented in an int
 
 * Monthly and yearly sales/profit trends with YoY comparison  
 * Region → State → City drill-down for geographic performance  
-* Discount vs. profit margin analysis, split by category, showing exactly where discounting turns unprofitable ![Discount vs Profit Margin Analysis]()
-
-Check out: dashboard/dashboard\_superstore\_sales.pbix
+* Discount vs. profit margin analysis, split by category, showing exactly where discounting turns unprofitable
+  
+Check out: dashboard\dashboard_superstore_sales.pbix
 
 ---
 
